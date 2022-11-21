@@ -550,6 +550,8 @@ class ProductTemplate(models.Model):
         }
 
     def price_compute(self, price_type, uom=None, currency=None, company=None, date=False):
+        # import pdb
+        # pdb.set_trace()
         company = company or self.env.company
         date = date or fields.Date.context_today(self)
 
